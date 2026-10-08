@@ -1,0 +1,42 @@
+PRACTICAL 3(E) - Extended File Attributes
+
+Step 1: Create a file
+touch notes.txt
+
+Step 2: Add a user extended attribute
+setfattr -n user.author -v "Rehan" notes.txt
+
+Step 3: View all attributes
+getfattr -d notes.txt
+
+Step 4: View a specific attribute
+getfattr -n user.author notes.txt
+
+Step 5: Add multiple attributes
+setfattr -n user.department -v "IT" notes.txt
+setfattr -n user.version -v "1.0" notes.txt
+
+Step 6: Display all attributes
+getfattr -d notes.txt
+
+Step 7: Modify an existing attribute
+setfattr -n user.version -v "2.0" notes.txt
+
+Check:
+getfattr -d notes.txt
+
+Step 8: Remove an attribute
+setfattr -x user.department notes.txt
+
+Step 9: Copy file while preserving attributes
+cp --preserve=xattr notes.txt backup.txt
+
+Check:
+getfattr -d backup.txt
+
+Step 10: Remove remaining user attributes
+setfattr -x user.author notes.txt
+setfattr -x user.version notes.txt
+
+Check:
+getfattr -d notes.txt

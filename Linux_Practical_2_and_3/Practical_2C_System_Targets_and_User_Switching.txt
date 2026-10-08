@@ -1,0 +1,38 @@
+PRACTICAL 2(C) - System Targets and User Switching
+
+Step 1: Check the current default target
+systemctl get-default
+
+Step 2: Set multi-user target as default
+sudo systemctl set-default multi-user.target
+
+Step 3: Verify the default target
+systemctl get-default
+
+Step 4: Reboot the system
+reboot
+
+Step 5: After reboot, log in from the text/terminal screen.
+
+Step 6: Check current user
+whoami
+
+Step 7: Switch to root user
+su -
+
+Enter the root password when asked.
+
+Step 8: Verify root user
+whoami
+
+Step 9: Exit root account
+exit
+
+Step 10: If required, change back to graphical target
+sudo systemctl set-default graphical.target
+
+Step 11: Verify
+systemctl get-default
+
+Step 12: Reboot
+reboot

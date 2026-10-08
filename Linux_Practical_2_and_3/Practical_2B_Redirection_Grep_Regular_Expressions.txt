@@ -1,0 +1,73 @@
+PRACTICAL 2(B) - Redirection, grep and Regular Expressions
+
+PART A - INPUT / OUTPUT REDIRECTION
+
+Step 1: Redirect output to a file
+ls > output.txt
+
+Step 2: Append output to a file
+ls >> output.txt
+
+Step 3: Redirect input from a file
+cat < output.txt
+
+Step 4: Use pipe to send output of one command to another
+ls | sort
+
+
+PART B - CREATE SAMPLE FILE FOR grep
+
+Step 1:
+cat > sumit
+
+Step 2:
+Enter a few lines of text.
+
+Step 3:
+Press Ctrl + D
+
+
+PART C - grep COMMANDS
+
+Step 1: Search a word
+grep "good" sumit
+
+Step 2: Ignore uppercase/lowercase
+grep -i "good" sumit
+
+Step 3: Show line numbers
+grep -n "good" sumit
+
+Step 4: Show lines NOT matching the word
+grep -v "good" sumit
+
+Step 5: Count matching lines
+grep -c "good" sumit
+
+Step 6: Search using beginning-of-line pattern
+grep "^A" sumit
+
+Step 7: Search using end-of-line pattern
+grep "ground$" sumit
+
+Step 8: Search uppercase letters
+grep "[A-Z]" sumit
+
+Step 9: Search lowercase letters
+grep "[a-z]" sumit
+
+Step 10: Search numbers
+grep "[0-9]" sumit
+
+Step 11: Search using OR with extended grep
+grep -E "A|B" sumit
+
+Useful Regular Expression Symbols:
+^      beginning of line
+$      end of line
+.      any single character
+*      zero or more occurrences
+[ ]    character set/range
+[A-Z]  uppercase letters
+[a-z]  lowercase letters
+[0-9]  digits

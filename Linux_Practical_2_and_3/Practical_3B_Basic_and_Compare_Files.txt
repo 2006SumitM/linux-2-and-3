@@ -1,0 +1,35 @@
+PRACTICAL 3(B) - Working with Basic and Compare Files
+
+Step 1: Create first file
+cat > file1
+Enter some text
+Press Ctrl + D
+
+Step 2: Create second file
+cat > file2
+Enter some text
+Press Ctrl + D
+
+Step 3: Display first file
+cat file1
+
+Step 4: Display second file
+cat file2
+
+Step 5: Check file type
+file file1
+file file2
+
+Step 6: Compare two files byte by byte
+cmp file1 file2
+
+If both files are identical, cmp normally gives no output.
+
+Step 7: Compare files line by line
+diff file1 file2
+
+Step 8: View file information if required
+stat file1
+
+Step 9: View second file information
+stat file2

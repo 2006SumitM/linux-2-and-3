@@ -1,0 +1,56 @@
+PRACTICAL 2(D) - Linux Filter Commands
+
+Create a sample file first:
+
+cat > sumit
+Enter multiple lines of text
+Press Ctrl + D
+
+
+Step 1: Display complete file
+cat sumit
+
+Step 2: Cut selected fields/columns
+cut -d " " -f 2 sumit
+
+Step 3: Display first lines
+head sumit
+
+To display a specific number of lines:
+head -3 sumit
+
+Step 4: Display last lines
+tail sumit
+
+To display a specific number of lines:
+tail -3 sumit
+
+Step 5: Sort file contents
+sort sumit
+
+Step 6: Sort in reverse order
+sort -r sumit
+
+Step 7: Search a pattern
+grep "IT" sumit
+
+Step 8: Count lines, words and characters
+wc sumit
+
+Step 9: Count only lines
+wc -l sumit
+
+Step 10: Count only words
+wc -w sumit
+
+Step 11: Count only characters/bytes
+wc -c sumit
+
+Main filter commands:
+cat
+cut
+head
+tail
+sort
+grep
+wc

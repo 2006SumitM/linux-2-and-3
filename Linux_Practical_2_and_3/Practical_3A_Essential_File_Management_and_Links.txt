@@ -1,0 +1,62 @@
+PRACTICAL 3(A) - Essential File Management Tools and Links
+
+PART A - BASIC FILE MANAGEMENT COMMANDS
+
+Step 1: Display current directory
+pwd
+
+Step 2: List files and directories
+ls
+
+Step 3: Create a directory
+mkdir project
+
+Step 4: Remove an empty directory
+rmdir project
+
+Step 5: Create an empty file
+touch file1.txt
+
+Step 6: Copy a file
+cp file1.txt file2.txt
+
+Step 7: Move / rename a file
+mv file2.txt newfile.txt
+
+Step 8: Delete a file
+rm newfile.txt
+
+Step 9: Remove directory and its contents
+rm -r project
+
+Step 10: Display file contents
+cat file1.txt
+
+Step 11: Check file type
+file file1.txt
+
+
+PART B - HARD LINK
+
+Step 1: Create a sample file
+echo "Linux Practical" > original.txt
+
+Step 2: Create a hard link
+ln original.txt hardlink.txt
+
+Step 3: Check inode numbers
+ls -li original.txt hardlink.txt
+
+The inode number should be the same for both.
+
+
+PART C - SYMBOLIC / SOFT LINK
+
+Step 1: Create symbolic link
+ln -s original.txt softlink.txt
+
+Step 2: Check links
+ls -l
+
+Step 3: Display through symbolic link
+cat softlink.txt

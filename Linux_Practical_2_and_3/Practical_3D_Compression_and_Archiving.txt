@@ -1,0 +1,76 @@
+PRACTICAL 3(D) - Compression and Archiving
+
+PART A - gzip
+
+Step 1: Create a sample file
+echo "Linux compression practical" > sample1
+
+Step 2: Compress using gzip
+gzip sample1
+
+Result:
+sample1.gz
+
+Step 3: Decompress
+gzip -d sample1.gz
+
+Or:
+gunzip sample1.gz
+
+Step 4: View gzip compression information
+gzip -l sample1.gz
+
+Useful gzip options:
+-c   write output to standard output
+-d   decompress
+-f   force
+-k   keep original file
+-l   list compression information
+-r   recursive
+-t   test compressed file
+-v   verbose
+
+
+PART B - bzip2
+
+Step 1: Create a sample file
+echo "Linux bzip2 practical" > sample2
+
+Step 2: Compress
+bzip2 sample2
+
+Result:
+sample2.bz2
+
+Step 3: Decompress
+bzip2 -d sample2.bz2
+
+Or:
+bunzip2 sample2.bz2
+
+
+PART C - tar ARCHIVE
+
+Step 1: Create sample files
+touch sample1 sample2
+
+Step 2: Create tar archive
+tar -cvf samples.tar sample1 sample2
+
+Step 3: View archive contents
+tar -tvf samples.tar
+
+Step 4: Extract archive
+tar -xvf samples.tar
+
+Step 5: Create gzip-compressed tar archive
+tar -czvf samples.tar.gz sample1 sample2
+
+Step 6: Extract gzip-compressed archive
+tar -xzvf samples.tar.gz
+
+Step 7: Create bzip2-compressed tar archive
+tar -cjvf samples.tar.bz2 sample1 sample2
+
+Step 8: Extract bzip2-compressed archive
+tar -xjvf samples.tar.bz2
